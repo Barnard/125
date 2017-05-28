@@ -123,9 +123,9 @@
 										<section>
 											<h3>All Administrators</h3>
 											{% for page in site.pages %}
-												{% if page.layout == 'a' %}										
+												{% if page.layout == 'ad' %}										
 													<ul class="actions">
-														<li><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button alt small">{{ page.title }}</a></li>
+														<li><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button alt small">{{ page.title }}</a></li>
 													</ul>
 												{% endif %}
 											{% endfor %}

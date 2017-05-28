@@ -11,10 +11,10 @@ permalink: /browse/category/people/administrators/
 <section class="box">
 	
 	{% for page in site.pages %}
-		{% if page.layout == 'a' %}
+		{% if page.layout == 'ad' %}
 			<h3>{{ page.title }}</h3>
 			<p>{{ page.p1 | truncatewords: 20 }}
-			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button small">More</a></p>
+			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
 			<hr />
 		{% endif %}
 	{% endfor %}
