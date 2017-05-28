@@ -1,0 +1,22 @@
+---
+layout: browse
+title: Browse - Administrators
+permalink: /browse/category/people/administrators/
+--- 
+
+<header class="major">
+	<h2>Browse - Administrators</h2>
+</header>
+
+<section class="box">
+	
+	{% for page in site.pages %}
+		{% if page.layout == 'a' %}
+			<h3>{{ page.title }}</h3>
+			<p>{{ page.p1 | truncatewords: 20 }}
+			<p><a href="/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button small">More</a></p>
+			<hr />
+		{% endif %}
+	{% endfor %}
+	
+</section>

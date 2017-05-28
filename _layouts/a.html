@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+	Elevation by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+-->
+<html>
+
+{% include head.html %}
+
+	<body>
+	
+		<div id="page-wrapper">
+
+			{% include header.html %}
+			
+		
+				<div class="wrapper style1">
+				
+					<section id="main" class="container">
+						<header class="major">
+							<h2>{{page.title}}</h2>
+							<p>
+							{% if page.era == 'pr' %}
+								<b>Pre-Barnard</b>
+							{% elsif page.era == 'ea' %}
+								<b>Early Barnard</b>
+							{% elsif page.era == 'in' %}
+								<b>Interwar Barnard</b>
+							{% elsif page.era == 'po' %}
+								<b>Postwar Barnard</b>
+							{% elsif page.era == 'em' %}
+								<b>Embattled Barnard</b>
+							{% elsif page.era == 're' %}	
+								<b>Recent Barnard</b>
+							{% endif %}
+							{% if page.secondera == 'pr' %}
+								<b>| Pre-Barnard</b>
+							{% elsif page.secondera == 'ea' %}
+								<b>| Early Barnard</b>
+							{% elsif page.secondera == 'in' %}
+								<b>| Interwar Barnard</b>
+							{% elsif page.secondera == 'po' %}
+								<b>| Postwar Barnard</b>
+							{% elsif page.secondera == 'em' %}
+								<b>| Embattled Barnard</b>
+							{% elsif page.secondera == 're' %}	
+								<b>| Recent Barnard</b>
+							{% endif %}
+							<b>|</b>
+							<b>Administrator</b>
+							{% if page.secondrole == 'sa' %}
+								<b>| Student/Alumae</b>
+							{% elsif page.secondrole == 'f' %}
+								<b>| Faculty</b>
+							{% elsif page.secondrole == 'ad' %}
+								<b>| Administrator</b>
+							{% elsif page.secondrole == 's' %}
+								<b>| Staffer</b>
+							{% elsif page.secondrole == 't' %}
+								<b>| Trustee</b>
+							{% elsif page.secondrole == 'd' %}
+								<b>| Donor</b>
+							{% elsif page.secondrole == 'c' %}
+								<b>| Columbia</b>
+							{% elsif page.secondrole == 'p' %}
+								<b>| Public Notable</b>
+							{% elsif page.secondrole == 'cb' %}
+								<b>| Current Building</b>
+							{% elsif page.secondrole == 'pb' %}
+								<b>| Past Building</b>
+							{% elsif page.secondrole == 'op' %}
+								<b>| Other Places</b>
+							{% elsif page.secondrole == 'oc' %}
+								<b>| Off Campus</b>
+							{% elsif page.secondrole == 'f' %}
+								<b>| Financial</b>
+							{% elsif page.secondrole == 'ac' %}
+								<b>| Academic</b>
+							{% elsif page.secondrole == 'ec' %}
+								<b>| Extra Curricular</b>
+							{% elsif page.secondrole == 'ae' %}
+								<b>| Annual Event</b>
+							{% elsif page.secondrole == 'g' %}
+								<b>| Governance</b>
+							{% elsif page.secondrole == 'bc' %}
+								<b>| Barnard/Columbia Relations</b>
+							{% elsif page.secondrole == 'ee' %}
+								<b>| External Event</b>
+							{% endif %}
+							</p>
+						</header>
+						<div class="row">
+							<div class="8u 12u(narrower)">
+
+								<!-- Content -->
+									<section id="content" class="box">
+										<!--<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>-->
+										<h3>Information</h3>
+										<p>{{page.p1}}</p>
+										<hr />
+										<h3>Source</h3>
+										<p>{{page.source}}</p>
+										<p>{{page.hyperlinksource}}</p>
+									</section>
+
+							</div>
+							<div class="4u 12u(narrower)">
+
+								<!-- Sidebar -->
+									<section id="sidebar" class="box">
+										<section>
+											<footer>
+												<ul class="actions">
+													<li><a href="/browse/category/people/administrators/" class="button small">Return to Administrators</a></li>
+												</ul>
+												<ul class="actions">
+													<li><a href="/browse/category/people/" class="button small">Return to People</a></li>
+												</ul>
+											</footer>
+										</section>
+										<hr />
+										<section>
+											<h3>Other Administrators</h3>
+											{% for page in site.pages %}
+												{% if page.layout == 'a' %}
+													{% unless page.title == title%}
+													<ul class="actions">
+														<li><a href="/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button alt small">{{ page.title }}</a></li>
+													</ul>
+													{% endunless %}
+												{% endif %}
+											{% endfor %}
+										</section>
+									</section>
+
+							</div>
+						</div>
+					</section>
+	
+				</div>
+				
+				
+				
+
+				{% include footer.html %}	
+				
+		</div>
+
+		{% include scripts.html %}	
+		
+	</body>
+	
+</html>
+	
+	
+	
