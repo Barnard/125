@@ -51,41 +51,41 @@
 							<b>Administrator</b>
 							{% if page.secondrole == 'sa' %}
 								<b>| Student/Alumae</b>
-							{% elsif page.secondrole == 'f' %}
+							{% elsif page.secondrole == 'fa' %}
 								<b>| Faculty</b>
 							{% elsif page.secondrole == 'ad' %}
 								<b>| Administrator</b>
-							{% elsif page.secondrole == 's' %}
+							{% elsif page.secondrole == 'st' %}
 								<b>| Staffer</b>
-							{% elsif page.secondrole == 't' %}
+							{% elsif page.secondrole == 'tr' %}
 								<b>| Trustee</b>
-							{% elsif page.secondrole == 'd' %}
+							{% elsif page.secondrole == 'do' %}
 								<b>| Donor</b>
-							{% elsif page.secondrole == 'c' %}
+							{% elsif page.secondrole == 'co' %}
 								<b>| Columbia</b>
-							{% elsif page.secondrole == 'p' %}
+							{% elsif page.secondrole == 'pu' %}
 								<b>| Public Notable</b>
-							{% elsif page.secondrole == 'cb' %}
+							{% elsif page.secondrole == 'cu' %}
 								<b>| Current Building</b>
-							{% elsif page.secondrole == 'pb' %}
+							{% elsif page.secondrole == 'pa' %}
 								<b>| Past Building</b>
-							{% elsif page.secondrole == 'op' %}
+							{% elsif page.secondrole == 'ot' %}
 								<b>| Other Places</b>
-							{% elsif page.secondrole == 'oc' %}
+							{% elsif page.secondrole == 'of' %}
 								<b>| Off Campus</b>
-							{% elsif page.secondrole == 'f' %}
+							{% elsif page.secondrole == 'fi' %}
 								<b>| Financial</b>
 							{% elsif page.secondrole == 'ac' %}
 								<b>| Academic</b>
-							{% elsif page.secondrole == 'ec' %}
+							{% elsif page.secondrole == 'ex' %}
 								<b>| Extra Curricular</b>
-							{% elsif page.secondrole == 'ae' %}
+							{% elsif page.secondrole == 'an' %}
 								<b>| Annual Event</b>
-							{% elsif page.secondrole == 'g' %}
+							{% elsif page.secondrole == 'go' %}
 								<b>| Governance</b>
-							{% elsif page.secondrole == 'bc' %}
+							{% elsif page.secondrole == 'ba' %}
 								<b>| Barnard/Columbia Relations</b>
-							{% elsif page.secondrole == 'ee' %}
+							{% elsif page.secondrole == 'ex' %}
 								<b>| External Event</b>
 							{% endif %}
 							</p>
@@ -121,14 +121,12 @@
 										</section>
 										<hr />
 										<section>
-											<h3>Other Administrators</h3>
+											<h3>All Administrators</h3>
 											{% for page in site.pages %}
-												{% if page.layout == 'a' %}
-													{% unless page.title == title%}
+												{% if page.layout == 'a' %}										
 													<ul class="actions">
-														<li><a href="/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button alt small">{{ page.title }}</a></li>
+														<li><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}/" class="button alt small">{{ page.title }}</a></li>
 													</ul>
-													{% endunless %}
 												{% endif %}
 											{% endfor %}
 										</section>
