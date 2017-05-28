@@ -1,17 +1,17 @@
 ---
 layout: browse
-title: Browse - Administrators
-permalink: /browse/category/people/administrators/
+title: Browse - Students/Alumae
+permalink: /browse/category/people/studentsalumae/
 --- 
 
 <header class="major">
-	<h2>Browse - Administrators</h2>
+	<h2>Browse - Students/Alumae</h2>
 </header>
 
 <section class="box">
 	
 	{% for page in site.pages %}
-		{% if page.layout == 'ad' %}
+		{% if page.layout == 'sa' %}
 			<h3>{{ page.title }}</h3>
 			<p>{{ page.p1 | truncatewords: 20 }}
 			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button small">More</a></p>

@@ -48,7 +48,7 @@
 								<b>| Recent Barnard</b>
 							{% endif %}
 							<b>|</b>
-							<b>Administrator</b>
+							<b>Faculty</b>
 							{% if page.secondrole == 'sa' %}
 								<b>| Student/Alumae</b>
 							{% elsif page.secondrole == 'fa' %}
@@ -323,7 +323,7 @@
 									<section id="sidebar" class="box">
 										<section>
 											<ul class="actions">
-												<li><a href="/browse/category/people/administrators/" class="button small">Return to Administrators</a></li>
+												<li><a href="/browse/category/people/faculty/" class="button small">Return to Faculty</a></li>
 											</ul>
 											<ul class="actions">
 												<li><a href="/browse/category/people/" class="button small">Return to People</a></li>
@@ -401,9 +401,9 @@
 										{% endif %}	
 										
 										<section>
-										<h3>Other Administrators</h3>
+										<h3>Other Faculty</h3>
 										{% for apage in site.pages %}
-											{% if apage.layout == 'ad' %}
+											{% if apage.layout == 'fa' %}
 												
 												{% if page.url != apage.url %}
 													<ul class="actions">
