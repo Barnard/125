@@ -7,16 +7,20 @@ permalink: /browse/category/people/administrators/
 <header class="major">
 	<h2>Browse - Administrators</h2>
 </header>
-
-<section class="box">
 	
 	{% for page in site.pages %}
-		{% if page.layout == 'ad' %}
+		{% if page.layout == 'entry' %}
+			<section class="box">
 			<h3>{{ page.title }}</h3>
 			<p>{{ page.p1 | truncatewords: 20 }}
 			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button small">More</a></p>
 			<hr />
+			</section>
+		{% else %}
+		    <section class="box">
+			<h3>No Results</h3>
+			<p>Unfortunately there are no administrators in Barnard 125 yet. Please check back soon!</p>
+			</section>
 		{% endif %}
 	{% endfor %}
 	
-</section>
