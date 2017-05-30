@@ -1,22 +1,30 @@
 ---
 layout: browse
-title: Browse - Administrators
-permalink: /browse/category/people/administrators/
+title: Browse - Trustees
+permalink: /browse/category/people/trustees/
 --- 
 
 <header class="major">
-	<h2>Browse - Administrators</h2>
+	<h2>{{ page.title }}</h2>
 </header>
 
 <section class="box">
 	
+	{% assign test = true %}
+	
 	{% for page in site.pages %}
-		{% if page.layout == 'ad' %}
+		{% if page.primaryrole == 'tr' %}
 			<h3>{{ page.title }}</h3>
-			<p>{{ page.p1 | truncatewords: 20 }}
-			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button small">More</a></p>
+			<p>{{ page.p1 | truncatewords: 20 }}</p>
+			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
 			<hr />
+			{% assign test = false %}
 		{% endif %}
 	{% endfor %}
+
+	{% if test %}
+		<h3>No Results</h3>
+		<p>Unfortunately there are no {{ page.title | remove: ' ' | strip_newlines | downcase | md5 | strip_html | split: '-'| last'}} in Barnard 125 yet. Please check back soon!</p>	
+	{% endif %}
 	
 </section>

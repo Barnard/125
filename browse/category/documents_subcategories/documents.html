@@ -1,93 +1,30 @@
 ---
-layout: browsesubcat
-title: Browse - People
-permalink: /browse/people/
+layout: browse
+title: Browse - Documents
+permalink: /documents/
 --- 
 
 <header class="major">
-	<h2>Browse - People</h2>
+	<h2>{{ page.title }}</h2>
 </header>
 
-<div class="row uniform">
+<section class="box">
+	
+	{% assign test = true %}
+	
+	{% for page in site.pages %}
+		{% if page.primaryrole == 'doc' %}
+			<h3>{{ page.title }}</h3>
+			<p>{{ page.p1 | truncatewords: 20 }}</p>
+			<p><a href="/documents/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
+			<hr />
+			{% assign test = false %}
+		{% endif %}
+	{% endfor %}
 
-	<div class="4u 12u(narrower)">
-		<a href="/browse/people/">
-			<section class="box special">
-				<h3>Students/Alumae</h3>
-			</section>
-		</a>	
-	</div>
+	{% if test %}
+		<h3>No Results</h3>
+		<p>Still have not figured this out, probably will do something with pdfs? Again, please let me know what documents we are talking about, then I can code it based on what we need. Thanks!</p>
+	{% endif %}
 	
-	<div class="4u 12u(narrower)">
-		<a href="/browse/places/">
-			<section class="box special">
-				<h3>Faculty</h3>
-			</section>
-		</a>
-	</div>
-	
-	<div class="4u 12u(narrower)">
-		<a href="/browse/entities/">
-			<section class="box special">
-				<h3>Administrators</h3>
-			</section>
-		</a>
-	</div>
-	
-</div>	
-	
-<div class="row uniform">
-
-	<div class="4u 12u(narrower)">
-		<a href="/browse/events/">							
-			<section class="box special">
-				<h3>Staffers</h3>
-			</section>
-		</a>
-	</div>
-	
-	<div class="4u 12u(narrower)">
-		<a href="/browse/documents/">
-			<section class="box special">
-				<h3>Trustees</h3>
-			</section>
-		</a>
-	</div>
-	
-	<div class="4u 12u(narrower)">									
-		<a href="/browse/images/">								
-			<section class="box special">
-				<h3>Donors</h3>
-			</section>
-		</a>
-	</div>
-	
-</div>
-
-<div class="row uniform">
-
-	<div class="4u 12u(narrower)">
-		<a href="/browse/events/">							
-			<section class="box special">
-				<h3>Columbia</h3>
-			</section>
-		</a>
-	</div>
-	
-	<div class="4u 12u(narrower)">
-		<a href="/browse/documents/">
-			<section class="box special">
-				<h3>Public Notables</h3>
-			</section>
-		</a>
-	</div>
-	
-	<div class="4u 12u(narrower)">
-		<a href="/browse/documents/">
-			<section class="box special">
-				<h3>All People</h3>
-			</section>
-		</a>
-	</div>
-	
-</div>
+</section>

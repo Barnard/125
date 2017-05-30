@@ -691,185 +691,215 @@
 									
 										{% if page.primaryrole == 'sa' %}
 											<h3>Other Students/Alumae</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'sa' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}
 										{% elsif page.primaryrole == 'fa' %}
 											<h3>Other Faculty</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'fa' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ad' %}
 											<h3>Other Administrators</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ad' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}
 										{% elsif page.primaryrole == 'st' %}
 											<h3>Other Staffers</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'st' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'tr' %}
 											<h3>Other Trustees</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'tr' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'do' %}
 											<h3>Other Donors</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'do' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}								
 										{% elsif page.primaryrole == 'co' %}
 											<h3>Other Columbia</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'co' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'pu' %}
 											<h3>Other Public Notables</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'pn' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'cu' %}
 											<h3>Other Current Buildings</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'cu' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/places/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'pa' %}
 											<h3>Other Past Buildings</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'pa' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/places/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ot' %}
 											<h3>Additional Other Places</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ot' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/places/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'of' %}
 											<h3>Other Off Campus</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'of' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/places/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'fi' %}
 											<h3>Other Financial</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'fi' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/entities/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ac' %}
 											<h3>Other Academic</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ac' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/entities/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ec' %}
 											<h3>Other Extra Curricular</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ec' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/entities/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'an' %}
 											<h3>Other Annual Events</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'an' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/events/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'go' %}
 											<h3>Other Governance</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'go' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/events/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ba' %}
 											<h3>Other Barnard/Columbia Relations</h3>
+											{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ba' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/events/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% elsif page.primaryrole == 'ex' %}
-											<h3>Other External Events</h3>
+											<h3>Other External Events</h3>{% for apage in site.pages %}
+												{% if apage.primaryrole == 'ex' %}
+													{% if page.url != apage.url %}
+														<ul class="actions">
+															<li><a href="/entries/events/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
+														</ul>												
+													{% endif %}
+												{% endif %}
+											{% endfor %}			
 										{% endif %}
 										
-										{% for apage in site.pages %}
-										
-											{% if apage.primaryrole == 'sa' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-											
-											{% elsif apage.primaryrole == 'fa' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-				
-											{% elsif apage.primaryrole == 'ad' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-											
-											{% elsif apage.primaryrole == 'st' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-											
-											{% elsif apage.primaryrole == 'tr' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-											
-											{% elsif apage.primaryrole == 'do' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-											
-											{% elsif apage.primaryrole == 'co' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'pu' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'cu' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'pa' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'ot' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'of' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'fi' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'ac' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'ec' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'an' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'go' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'ba' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% elsif apage.primaryrole == 'ex' %}
-												{% if page.url != apage.url %}
-													<ul class="actions">
-														<li><a href="/entries/people/{{ apage.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button alt small">{{ apage.title }}</a></li>
-													</ul>												
-												{% endif %}
-												
-											{% endif %}											
-											
-										{% endfor %}
 
-										
-										
 										</section>
 										
 									</section>

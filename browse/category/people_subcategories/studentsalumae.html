@@ -5,18 +5,26 @@ permalink: /browse/category/people/studentsalumae/
 --- 
 
 <header class="major">
-	<h2>Browse - Students/Alumae</h2>
+	<h2>{{ page.title }}</h2>
 </header>
 
 <section class="box">
 	
+	{% assign test = true %}
+	
 	{% for page in site.pages %}
-		{% if page.layout == 'sa' %}
+		{% if page.primaryrole == 'sa' %}
 			<h3>{{ page.title }}</h3>
-			<p>{{ page.p1 | truncatewords: 20 }}
-			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}" class="button small">More</a></p>
+			<p>{{ page.p1 | truncatewords: 20 }}</p>
+			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
 			<hr />
+			{% assign test = false %}
 		{% endif %}
 	{% endfor %}
+
+	{% if test %}
+		<h3>No Results</h3>
+		<p>Unfortunately there are no students/alumae in Barnard 125 yet. Please check back soon!</p>	
+	{% endif %}
 	
 </section>

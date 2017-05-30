@@ -1,0 +1,23 @@
+---
+layout: browse
+title: Browse - All Entities
+permalink: /browse/category/entities/allentities/
+--- 
+
+<header class="major">
+	<h2>{{ page.title }}</h2>
+</header>
+
+<section class="box">
+		
+	{% for page in site.pages %}
+		{% if page.primaryrole == 'fi' or page.primaryrole == 'ac' or page.primaryrole == 'ef' %}
+			<h3>{{ page.title }}</h3>
+			<p>{{ page.p1 | truncatewords: 20 }}</p>
+			<p><a href="/entries/entities/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
+			<hr />
+		{% endif %}
+	{% endfor %}
+
+	
+</section>
