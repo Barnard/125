@@ -14,8 +14,8 @@ permalink: /browse/category/people/faculty/
 	
 	{% for page in site.pages %}
 		{% if page.primaryrole == 'fa' %}
-			<h3>{{ page.title }}</h3>
-			<p>{{ page.p1 | truncatewords: 20 }}</p>
+			<h3>{{ page.lastname }}</h3>
+			<p>{{ page.title | truncatewords: 20 }}</p>
 			<p><a href="/entries/people/{{ page.title | remove: ' ' | strip_newlines | downcase | md5 }}.html" class="button small">More</a></p>
 			<hr />
 			{% assign test = false %}
