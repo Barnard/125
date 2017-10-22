@@ -147,8 +147,6 @@
 												</thead>
 												<tbody>
 												    {% if page.title == null %}
-														<td></td>
-														<td></td>
 													{% else %}
 													<tr>
 														<td>Name</td>
@@ -162,56 +160,80 @@
 														<td>{{page.department}}</td>
 													</tr>
 													{% endif %}
+													{% if page.came == null %}
+													{% else %}
 													<tr>
-														<td>Nothing</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
+														<td>Arrival Year</td>
+														<td>{{page.came}}</td>
 													</tr>
+													{% endif %}
+													{% if page.left == null %}
+													{% else %}
 													<tr>
-														<td>Something</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
+														<td>Departure Year</td>
+														<td>{{page.left}}</td>
 													</tr>
+													{% endif %}
+													{% if page.tenure == null %}
+													{% else %}
 													<tr>
-														<td>Nothing</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
+														<td>Tenure</td>
+														<td>{{page.tenure}}</td>
 													</tr>
+													{% endif %}
+													{% if page.departure == null %}
+													{% else %}
 													<tr>
-														<td>Something</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
+														<td>Departure Reason</td>
+														<td>{{page.departure}}</td>
 													</tr>
+													{% endif %}
+													{% if page.gender == null %}
+													{% else %}
+													<tr>
+														<td>Gender</td>
+														<td>{{page.gender}}</td>
+													</tr>
+													{% endif %}
+													{% if page.ab == null %}
+													{% else %}
+													<tr>
+														<td>Undergraduate</td>
+														<td>{{page.ab}}</td>
+													</tr>
+													{% endif %}
+													{% if page.abtype == null %}
+													{% else %}
+													<tr>
+														<td>Undergraduate Type</td>
+														<td>{{page.abtype}}</td>
+													</tr>
+													{% endif %}
+													{% if page.phd == null %}
+													{% else %}
+													<tr>
+														<td>PhD</td>
+														<td>{{page.phd}}</td>
+													</tr>
+													{% endif %}
+													{% if page.phdtype == null %}
+													{% else %}
+													<tr>
+														<td>PhD Type</td>
+														<td>{{page.phdtype}}</td>
+													</tr>
+													{% endif %}
+													{% if page.points == null %}
+													{% else %}
+													<tr>
+														<td>Points</td>
+														<td>{{page.points}}</td>
+													</tr>
+													{% endif %}
 												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
 											</table>
 										</div>
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
-										
+																				
 										
 										<p>{{page.p1}}</p>
 										<p>{{page.p2}}</p>
@@ -765,7 +787,7 @@
 									
 										{% if page.primaryrole == 'sa' %}
 											<h3>Other Students/Alumae</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'sa' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -776,7 +798,7 @@
 											{% endfor %}
 										{% elsif page.primaryrole == 'fa' %}
 											<h3>Other Faculty</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'fa' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -787,7 +809,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ad' %}
 											<h3>Other Administrators</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ad' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -798,7 +820,7 @@
 											{% endfor %}
 										{% elsif page.primaryrole == 'st' %}
 											<h3>Other Staffers</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'st' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -809,7 +831,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'tr' %}
 											<h3>Other Trustees</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'tr' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -820,7 +842,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'do' %}
 											<h3>Other Donors</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'do' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -831,7 +853,7 @@
 											{% endfor %}								
 										{% elsif page.primaryrole == 'co' %}
 											<h3>Other Columbia</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'co' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -842,7 +864,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'pu' %}
 											<h3>Other Public Notables</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'pn' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -853,7 +875,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'cu' %}
 											<h3>Other Current Buildings</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'cu' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -864,7 +886,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'pa' %}
 											<h3>Other Past Buildings</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'pa' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -875,7 +897,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ot' %}
 											<h3>Additional Other Places</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ot' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -886,7 +908,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'of' %}
 											<h3>Other Off Campus</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'of' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -897,7 +919,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'fi' %}
 											<h3>Other Financial</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'fi' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -908,7 +930,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ac' %}
 											<h3>Other Academic</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ac' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -919,7 +941,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ec' %}
 											<h3>Other Extra Curricular</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ec' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -930,7 +952,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'an' %}
 											<h3>Other Annual Events</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'an' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -941,7 +963,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'go' %}
 											<h3>Other Governance</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'go' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -952,7 +974,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ba' %}
 											<h3>Other Barnard/Columbia Relations</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ba' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
@@ -963,7 +985,7 @@
 											{% endfor %}			
 										{% elsif page.primaryrole == 'ex' %}
 											<h3>Other External Events</h3>
-											{% for apage in site.pages limit:7 %}
+											{% for apage in site.pages limit:14 %}
 												{% if apage.primaryrole == 'ex' %}
 													{% if page.url != apage.url %}
 														<ul class="actions">
