@@ -134,12 +134,80 @@
 
 								<!-- Content -->
 									<section id="content" class="box">
-										{% if page.p1 == null %}
-											<p></p>
-										{% else %}
-										  <h3>Information</h3>
-										  <p>{{page.p1}}</p>
-										{% endif %}
+										
+										<h3>Information</h3>
+										
+										<h4>Default</h4>
+										<div class="table-wrapper">
+											<table>
+												<thead>
+													<tr>
+														<th>Name</th>
+														<th>{{page.title}}</th>
+													</tr>
+												</thead>
+												<tbody>
+													{% if page.department == null %}
+														<td></td>
+														<td></td>
+													{% else %}
+													<tr>
+														<td>Department</td>
+														<td>{{page.department}}</td>
+													</tr>
+													{% endif %}
+													<tr>
+														<td>Nothing</td>
+														<td>Vis ac commodo adipiscing arcu aliquet.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Something</td>
+														<td> Morbi faucibus arcu accumsan lorem.</td>
+														<td>29.99</td>
+													</tr>
+													<tr>
+														<td>Nothing</td>
+														<td>Vitae integer tempus condimentum.</td>
+														<td>19.99</td>
+													</tr>
+													<tr>
+														<td>Something</td>
+														<td>Ante turpis integer aliquet porttitor.</td>
+														<td>29.99</td>
+													</tr>
+												</tbody>
+												<tfoot>
+													<tr>
+														<td colspan="2"></td>
+														<td>100.00</td>
+													</tr>
+												</tfoot>
+											</table>
+										</div>
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										<p>{{page.p1}}</p>
 										<p>{{page.p2}}</p>
 										<p>{{page.p3}}</p>
 										<p>{{page.p4}}</p>
