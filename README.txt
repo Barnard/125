@@ -1,3 +1,9 @@
+Spreadsheet rules:
+Do not use the charecters "/" or ":"
+Keep it UTF-8 for now, I'm working on this. So avoid umlauts etc.
+
+---
+
 Welcome to the source code of Barnard History, (barnardhistory.org) an institutional history of Barnard’s first 125+ years. A digital version of Professor Robert A. McCaughey’s book, the site is a resource for learning more about the history of Barnard. This guide will explain how to create an entry.
 I have done my best to make adding an entry as fast as possible, and to require no coding. If you find an edge case I haven’t accounted for (a 20 paragraph entry, 7 pictures, something like that) just let me know. 
 
