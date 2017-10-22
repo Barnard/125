@@ -137,16 +137,24 @@
 										
 										<h3>Information</h3>
 										
-										<h4>Default</h4>
 										<div class="table-wrapper">
 											<table>
 												<thead>
 													<tr>
-														<th>Name</th>
-														<th>{{page.title}}</th>
+														<th></th>
+														<th></th>
 													</tr>
 												</thead>
 												<tbody>
+												    {% if page.title == null %}
+														<td></td>
+														<td></td>
+													{% else %}
+													<tr>
+														<td>Name</td>
+														<td>{{page.title}}</td>
+													</tr>
+													{% endif %}
 													{% if page.department == null %}
 														<td></td>
 														<td></td>
