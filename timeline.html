@@ -1,5 +1,4 @@
 ---
-<<<<<<< HEAD
 title: BH - Timeline
 layout: standard
 permalink: /timeline
@@ -39,27 +38,3 @@ permalink: /timeline
 
 
 </div>
-=======
-layout: browse
-title: Timeline
-permalink: /timeline/
---- 
-
-<iframe onmousewheel="" frameborder="0" style="border-width:0;" id="tl-timeline-iframe" width="1200" height="700" src="https://www.tiki-toki.com/timeline/embed/267429/9247327124/"></iframe>
-<script type="text/javascript">
-if (window.postMessage) {
-var tlMouseupFunc = function() {
-var tlFrame = document.getElementById("tl-timeline-iframe");
-if (tlFrame.contentWindow && tlFrame.contentWindow.postMessage) {
-tlFrame.contentWindow.postMessage("mouseup","*");
-}
-}
-if (typeof window.addEventListener != "undefined") {
-window.addEventListener("mouseup", tlMouseupFunc, false);
-}
-else if (typeof window.attachEvent != "undefined") {
-window.attachEvent("onmouseup", tlMouseupFunc);
-}
-}
-</script>
->>>>>>> 6bdaa8c4a3d45c8fcd76ddc1ba832f6744e9d8ce
