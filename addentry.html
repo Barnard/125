@@ -12,19 +12,6 @@ permalink: /addentry
         <div class="card-content white-text">
           <span class="card-title">Add Entry</span>
           <p>Select the category of the entry you are creating. Leave unknown fields blank.</p>
-          <br>
-          <p>For bulk database upload from an Excel file, please upload the file below. Please read the <a href="/documentation">documentation</a> and format the excel file correctly.</p>
-          <form action="#">
-            <div class="file-field input-field">
-              <div class="btn">
-                <span>Upload Excel File</span>
-                <input type="file">
-              </div>
-              <div class="file-path-wrapper">
-                <input class="file-path validate" type="text">
-              </div>
-            </div>
-          </form>
         </div>
       </div>
     </div>
@@ -332,10 +319,6 @@ permalink: /addentry
                 </div>
               </div>
 
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit Entry
-                  <i class="material-icons right">send</i>
-              </button>
-
             </form>
           </div>
         </div>
@@ -395,10 +378,6 @@ permalink: /addentry
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Entry
-            <i class="material-icons right">send</i>
-        </button>
-
       </div>
 
 
@@ -452,10 +431,6 @@ permalink: /addentry
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Entry
-            <i class="material-icons right">send</i>
-        </button>
-
       </div>
       <div id="documents" class="col s12">
 
@@ -507,13 +482,33 @@ permalink: /addentry
           </div>
         </div>
 
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit Entry
-            <i class="material-icons right">send</i>
-        </button>
-
-
-
-
       </div>
+
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Upload Image File(s) (.jpg)</span>
+          <input type="file" multiple>
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+
+      <br>
+
+      <button class="btn waves-effect waves-light modal-trigger" href="#entry_modal" type="submit" name="action">Submit Entry
+          <i class="material-icons right">send</i>
+      </button>
+
+      <div id="entry_modal" class="modal">
+        <div class="modal-content">
+          <h4>Entry Successfully Submitted!</h4>
+          <p>Your entry is being uploaded to the database. Please do not submit it again. If you would like to edit it, please navigate to its page.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+      </div>
+
     </div>
 </div>
